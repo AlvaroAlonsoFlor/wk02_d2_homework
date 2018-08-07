@@ -21,4 +21,15 @@ class Bear
 
   end
 
+  # def eat_fish(river)
+  #   if river.fishes == []
+  #     return "There are no fishes to eat"
+  #   else
+  #     @stomach += river.fishes[0]
+  #     river.lose_a_fish
+  #     #I might have to change it in the future
+  #   end
+
+  end
+
 end
