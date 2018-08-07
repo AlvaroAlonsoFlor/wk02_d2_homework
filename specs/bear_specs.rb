@@ -16,6 +16,7 @@ class BearTest < MiniTest::Test
     @bear2 = Bear.new("Blackie", ["fish1", "fish2"])
 
     @river = River.new("Ebro", fishes)
+    
   end
 
   def test_has_a_name

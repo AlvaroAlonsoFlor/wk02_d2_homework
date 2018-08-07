@@ -11,6 +11,7 @@ class Bear
   end
 
   def count_food
+    
     food_eaten = @stomach.count
 
     if @stomach == []
@@ -22,6 +23,7 @@ class Bear
   end
 
   def eat_fish(river)
+
     if river.fishes == []
       return "There are no fishes to eat"
     else

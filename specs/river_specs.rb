@@ -6,6 +6,7 @@ require_relative("../river.rb")
 
 class RiverTest < MiniTest::Test
   def setup
+    
     fish1 = Fish.new("fish1")
     fish2 = Fish.new("fish2")
     fish3 = Fish.new("fish3")
