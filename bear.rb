@@ -30,6 +30,6 @@ class Bear
   #     #I might have to change it in the future
   #   end
 
-  end
+  # end
 
 end
