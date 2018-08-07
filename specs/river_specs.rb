@@ -2,7 +2,7 @@ require("minitest/autorun")
 require("minitest/rg")
 require_relative("../fish.rb")
 require_relative("../river.rb")
-require_relative("../bear.rb")
+# require_relative("../bear.rb")
 
 class RiverTest < MiniTest::Test
   def setup

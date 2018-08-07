@@ -2,12 +2,19 @@ require("minitest/autorun")
 require("minitest/rg")
 require_relative("../bear.rb")
 require_relative("../river.rb")
+require_relative("../fish.rb")
 
 class BearTest < MiniTest::Test
   def setup
+    fish1 = Fish.new("fish1")
+    fish2 = Fish.new("fish2")
+    fish3 = Fish.new("fish3")
+    fishes = [fish1, fish2, fish3]
+
+
     @bear1 = Bear.new("Brownie")
     @bear2 = Bear.new("Blackie", ["fish1", "fish2"])
-    fishes = ["fish1", "fish2", "fish3"]
+
     @river = River.new("Ebro", fishes)
   end
 
@@ -33,8 +40,7 @@ class BearTest < MiniTest::Test
   end
 
   def test_take_a_fish
-    expected = ["fish1"]
     @bear1.eat_fish(@river)
-    assert_equal(expected, @bear1.stomach)
+    assert_equal(1, @bear1.stomach.count)
   end
 end
