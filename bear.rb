@@ -1,8 +1,9 @@
 class Bear
-  attr_reader(:name, :stomach)
+  attr_reader(:name, :type, :stomach )
 
-  def initialize(name, stomach = [])
+  def initialize(name, type, stomach = [])
     @name = name
+    @type = type
     @stomach = stomach
   end
 
@@ -11,7 +12,7 @@ class Bear
   end
 
   def count_food
-    
+
     food_eaten = @stomach.count
 
     if @stomach == []

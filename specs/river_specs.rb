@@ -6,7 +6,7 @@ require_relative("../river.rb")
 
 class RiverTest < MiniTest::Test
   def setup
-    
+
     fish1 = Fish.new("fish1")
     fish2 = Fish.new("fish2")
     fish3 = Fish.new("fish3")
@@ -28,6 +28,8 @@ class RiverTest < MiniTest::Test
   end
 
   def test_lose_a_fish
+    # I could change the function to put number of fish and be able to lose more than 1 fish with the same function
+    
     expected = 2 #changed it since test_check_river_fishes works and we only need to check how many fishes we have left
     @river.lose_a_fish
     assert_equal(expected, @river.fishes.count)

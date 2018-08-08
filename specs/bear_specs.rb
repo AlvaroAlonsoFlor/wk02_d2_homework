@@ -4,19 +4,23 @@ require_relative("../bear.rb")
 require_relative("../river.rb")
 require_relative("../fish.rb")
 
+# I should have put a type parameter on bear
+
+
 class BearTest < MiniTest::Test
   def setup
     fish1 = Fish.new("fish1")
     fish2 = Fish.new("fish2")
     fish3 = Fish.new("fish3")
+
     fishes = [fish1, fish2, fish3]
 
 
-    @bear1 = Bear.new("Brownie")
-    @bear2 = Bear.new("Blackie", ["fish1", "fish2"])
+    @bear1 = Bear.new("Brownie",  "black")
+    @bear2 = Bear.new("Blackie", "black", ["fish1", "fish2"])
 
     @river = River.new("Ebro", fishes)
-    
+
   end
 
   def test_has_a_name
